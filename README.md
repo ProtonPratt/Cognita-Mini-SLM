@@ -6,8 +6,8 @@
 </p>
 
 <p align="center">
-  <a href="https://huggingface.co/ProtonPratt/Cognita-Mini-167M"><img alt="Base model on Hugging Face" src="https://img.shields.io/badge/%F0%9F%A4%97%20base%20model-Cognita--Mini--167M-ffcc4d"></a>
-  <a href="https://huggingface.co/ProtonPratt/Cognita-Mini-167M-instruct-lora"><img alt="Instruction adapter on Hugging Face" src="https://img.shields.io/badge/%F0%9F%A4%97%20adapter-instruct--lora-ffcc4d"></a>
+  <a href="https://huggingface.co/ProtonPrat/Cognita-Mini-167M"><img alt="Base model on Hugging Face" src="https://img.shields.io/badge/%F0%9F%A4%97%20base%20model-Cognita--Mini--167M-ffcc4d"></a>
+  <a href="https://huggingface.co/ProtonPrat/Cognita-Mini-167M-instruct-lora"><img alt="Instruction adapter on Hugging Face" src="https://img.shields.io/badge/%F0%9F%A4%97%20adapter-instruct--lora-ffcc4d"></a>
   <a href="LICENSE"><img alt="Code license: MIT" src="https://img.shields.io/badge/code-MIT-2a78d6"></a>
   <img alt="Python 3.12" src="https://img.shields.io/badge/python-3.12-2a78d6">
   <img alt="PyTorch 2.8" src="https://img.shields.io/badge/pytorch-2.8-eb6834">
@@ -65,7 +65,7 @@ Continue text with the base model:
 ```python
 from transformers import AutoModelForCausalLM, LlamaTokenizer
 
-repo = "ProtonPratt/Cognita-Mini-167M"
+repo = "ProtonPrat/Cognita-Mini-167M"
 tokenizer = LlamaTokenizer.from_pretrained(repo)
 model = AutoModelForCausalLM.from_pretrained(repo)
 
@@ -80,7 +80,7 @@ Ask the instruction-tuned model a question:
 ```python
 from peft import PeftModel
 
-model = PeftModel.from_pretrained(model, "ProtonPratt/Cognita-Mini-167M-instruct-lora")
+model = PeftModel.from_pretrained(model, "ProtonPrat/Cognita-Mini-167M-instruct-lora")
 prompt = "### Instruction:\nଭୋକ ଲାଗିଲେ ଲୋକମାନେ ସାଧାରଣତଃ କ'ଣ କରନ୍ତି?\n\n### Response:\n"   # "What do people usually do when hungry?"
 inputs = tokenizer(prompt, return_tensors="pt")
 output = model.generate(**inputs, max_new_tokens=40, do_sample=False)
@@ -99,13 +99,13 @@ python inference/chat.py --instruction "What do people usually do when they are 
 
 | Artifact | Size | Link |
 |---|---|---|
-| Base model, pre-trained from scratch | 670 MB | [ProtonPratt/Cognita-Mini-167M](https://huggingface.co/ProtonPratt/Cognita-Mini-167M) |
-| Instruction-tuning LoRA adapter | 13 MB | [ProtonPratt/Cognita-Mini-167M-instruct-lora](https://huggingface.co/ProtonPratt/Cognita-Mini-167M-instruct-lora) |
+| Base model, pre-trained from scratch | 670 MB | [ProtonPrat/Cognita-Mini-167M](https://huggingface.co/ProtonPrat/Cognita-Mini-167M) |
+| Instruction-tuning LoRA adapter | 13 MB | [ProtonPrat/Cognita-Mini-167M-instruct-lora](https://huggingface.co/ProtonPrat/Cognita-Mini-167M-instruct-lora) |
 | Tokenizer (SentencePiece, 32k) | 1.5 MB | [`tokenizer/spm/`](tokenizer/spm) in this repository |
 
 ```bash
-hf download ProtonPratt/Cognita-Mini-167M --local-dir Cognita-Mini-167M
-hf download ProtonPratt/Cognita-Mini-167M-instruct-lora --local-dir Cognita-Mini-167M-instruct-lora
+hf download ProtonPrat/Cognita-Mini-167M --local-dir Cognita-Mini-167M
+hf download ProtonPrat/Cognita-Mini-167M-instruct-lora --local-dir Cognita-Mini-167M-instruct-lora
 ```
 
 ## How it was built
@@ -407,12 +407,12 @@ torchrun --nproc_per_node 2 finetune/train_lora.py --base-model pretrain/checkpo
 <summary><b>5. Evaluation and figures</b></summary>
 
 ```bash
-python eval/char_count_accuracy.py --base-model ProtonPratt/Cognita-Mini-167M \
-    --adapter ProtonPratt/Cognita-Mini-167M-instruct-lora \
+python eval/char_count_accuracy.py --base-model ProtonPrat/Cognita-Mini-167M \
+    --adapter ProtonPrat/Cognita-Mini-167M-instruct-lora \
     --data english=ft/count_en_val.jsonl odia=ft/count_or_val.jsonl dogri_script=ft/count_doi_val.jsonl --max-examples 2000
-python eval/piqa_accuracy.py --base-model ProtonPratt/Cognita-Mini-167M \
-    --adapter ProtonPratt/Cognita-Mini-167M-instruct-lora --data piqa/data/valid.jsonl --labels piqa/data/valid-labels.lst
-python eval/perplexity.py --model ProtonPratt/Cognita-Mini-167M --data odia=my_heldout_odia.txt
+python eval/piqa_accuracy.py --base-model ProtonPrat/Cognita-Mini-167M \
+    --adapter ProtonPrat/Cognita-Mini-167M-instruct-lora --data piqa/data/valid.jsonl --labels piqa/data/valid-labels.lst
+python eval/perplexity.py --model ProtonPrat/Cognita-Mini-167M --data odia=my_heldout_odia.txt
 
 python scripts/make_figures.py        # regenerates every figure in assets/ from results/
 ```

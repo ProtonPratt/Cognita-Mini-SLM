@@ -4,8 +4,8 @@
 Run `hf auth login` first. Repositories are created if they do not exist.
 
 Example:
-    python scripts/upload_to_hub.py --hub-user ProtonPratt            # public
-    python scripts/upload_to_hub.py --hub-user ProtonPratt --private
+    python scripts/upload_to_hub.py --hub-user ProtonPrat            # public
+    python scripts/upload_to_hub.py --hub-user ProtonPrat --private
 """
 
 import argparse

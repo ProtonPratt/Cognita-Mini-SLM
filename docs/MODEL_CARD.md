@@ -42,7 +42,7 @@ Code, figures and the full write-up: **https://github.com/ProtonPratt/Cognita-Mi
 ```python
 from transformers import AutoModelForCausalLM, LlamaTokenizer
 
-repo = "ProtonPratt/Cognita-Mini-167M"
+repo = "ProtonPrat/Cognita-Mini-167M"
 tokenizer = LlamaTokenizer.from_pretrained(repo)
 model = AutoModelForCausalLM.from_pretrained(repo)
 
@@ -55,7 +55,7 @@ print(tokenizer.decode(output[0], skip_special_tokens=True))
 Requires `transformers>=4.56,<5` and `sentencepiece`. Load the tokenizer with `LlamaTokenizer`.
 
 This is a plain language model: it continues text. For question-style prompts, add the
-[instruction adapter](https://huggingface.co/ProtonPratt/Cognita-Mini-167M-instruct-lora).
+[instruction adapter](https://huggingface.co/ProtonPrat/Cognita-Mini-167M-instruct-lora).
 
 ## Training data
 

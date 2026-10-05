@@ -3,7 +3,7 @@ license: cc-by-nc-4.0
 language:
 - en
 - or
-base_model: ProtonPratt/Cognita-Mini-167M
+base_model: ProtonPrat/Cognita-Mini-167M
 library_name: peft
 pipeline_tag: text-generation
 tags:
@@ -14,7 +14,7 @@ tags:
 
 # Cognita-Mini-167M-instruct-lora
 
-A LoRA adapter that turns [Cognita-Mini-167M](https://huggingface.co/ProtonPratt/Cognita-Mini-167M)
+A LoRA adapter that turns [Cognita-Mini-167M](https://huggingface.co/ProtonPrat/Cognita-Mini-167M)
 into a single-turn instruction follower for two tasks: short commonsense answers and character
 counting, in English and Odia, with a small Devanagari-script subset.
 
@@ -34,10 +34,10 @@ Code and write-up: **https://github.com/ProtonPratt/Cognita-Mini-SLM**
 from peft import PeftModel
 from transformers import AutoModelForCausalLM, LlamaTokenizer
 
-base = "ProtonPratt/Cognita-Mini-167M"
+base = "ProtonPrat/Cognita-Mini-167M"
 tokenizer = LlamaTokenizer.from_pretrained(base)
 model = PeftModel.from_pretrained(AutoModelForCausalLM.from_pretrained(base),
-                                  "ProtonPratt/Cognita-Mini-167M-instruct-lora")
+                                  "ProtonPrat/Cognita-Mini-167M-instruct-lora")
 
 prompt = "### Instruction:\nଭୋକ ଲାଗିଲେ ଲୋକମାନେ ସାଧାରଣତଃ କ'ଣ କରନ୍ତି?\n\n### Response:\n"
 inputs = tokenizer(prompt, return_tensors="pt")

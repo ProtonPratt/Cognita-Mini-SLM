@@ -16,8 +16,8 @@ import torch
 from peft import PeftModel
 from transformers import AutoModelForCausalLM, LlamaTokenizer
 
-DEFAULT_BASE = "ProtonPratt/Cognita-Mini-167M"
-DEFAULT_ADAPTER = "ProtonPratt/Cognita-Mini-167M-instruct-lora"
+DEFAULT_BASE = "ProtonPrat/Cognita-Mini-167M"
+DEFAULT_ADAPTER = "ProtonPrat/Cognita-Mini-167M-instruct-lora"
 PROMPT_TEMPLATE = "### Instruction:\n{instruction}\n\n### Response:\n"
 
 

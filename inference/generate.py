@@ -16,7 +16,7 @@ import re
 import torch
 from transformers import AutoModelForCausalLM, LlamaTokenizer
 
-DEFAULT_MODEL = "ProtonPratt/Cognita-Mini-167M"
+DEFAULT_MODEL = "ProtonPrat/Cognita-Mini-167M"
 SENTENCE_BOUNDARY = re.compile(r"(?<=[.!?।\n])\s+")
 
 

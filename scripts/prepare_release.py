@@ -9,7 +9,7 @@ Example:
     python scripts/prepare_release.py \
         --base-model path/to/pretrain/checkpoints-final \
         --adapter path/to/finetune/lora-best \
-        --hub-user ProtonPratt
+        --hub-user ProtonPrat
 """
 
 import argparse
