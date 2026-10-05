@@ -328,7 +328,7 @@ With the adapter, the first three short examples of the English counting validat
 ## Reproduce
 
 ```bash
-git clone https://github.com/ProtonPratt/Cognita-Mini.git && cd Cognita-Mini
+git clone https://github.com/ProtonPratt/Cognita-Mini-SLM.git && cd Cognita-Mini-SLM
 pip install -r requirements.txt
 ```
 
@@ -479,6 +479,6 @@ is the cleaned-up version, with every reported number measured again from the re
   author = {Pratyush Jena},
   title  = {Cognita-Mini: a 167M-parameter English, Odia and Dogri language model trained from scratch},
   year   = {2025},
-  url    = {https://github.com/ProtonPratt/Cognita-Mini}
+  url    = {https://github.com/ProtonPratt/Cognita-Mini-SLM}
 }
 ```

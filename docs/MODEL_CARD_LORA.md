@@ -18,7 +18,7 @@ A LoRA adapter that turns [Cognita-Mini-167M](https://huggingface.co/ProtonPratt
 into a single-turn instruction follower for two tasks: short commonsense answers and character
 counting, in English and Odia, with a small Devanagari-script subset.
 
-Code and write-up: **https://github.com/ProtonPratt/Cognita-Mini**
+Code and write-up: **https://github.com/ProtonPratt/Cognita-Mini-SLM**
 
 | | |
 |---|---|

@@ -24,7 +24,7 @@ A 167M-parameter decoder-only language model for **English, Odia and Dogri**, pr
 initialisation on 2.42 billion tokens. The architecture follows the Qwen3 layout; no pre-trained
 weights were used, and the tokenizer was trained for this project.
 
-Code, figures and the full write-up: **https://github.com/ProtonPratt/Cognita-Mini**
+Code, figures and the full write-up: **https://github.com/ProtonPratt/Cognita-Mini-SLM**
 
 | | |
 |---|---|
