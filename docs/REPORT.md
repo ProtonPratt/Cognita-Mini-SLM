@@ -6,7 +6,8 @@ from a file in [`results/`](../results), produced by a script in this repository
 
 Contents: [1. Goal](#1-goal) · [2. Corpus](#2-corpus) · [3. Tokenizer](#3-tokenizer) ·
 [4. Model](#4-model) · [5. Pre-training](#5-pre-training) · [6. Instruction tuning](#6-instruction-tuning) ·
-[7. Evaluation](#7-evaluation) · [8. Lessons](#8-lessons) · [9. Reproducibility](#9-reproducibility)
+[7. Evaluation](#7-evaluation) · [8. Lessons](#8-lessons) · [9. Reproducibility](#9-reproducibility) ·
+[10. References](#10-references)
 
 ## 1. Goal
 
@@ -26,11 +27,11 @@ low-resource in the strict sense: all the clean text that could be found amounts
 |---|---|---|---|
 | English | `wikimedia/wikipedia`, `20231101.en` | encyclopedic text | CC BY-SA 3.0, GFDL |
 | English | `HuggingFaceFW/fineweb`, `CC-MAIN-2025-26` | filtered web crawl | ODC-By |
-| Odia | AI4Bharat IndicCorp v2, Odia split | news and web sentences | not tagged, see the dataset page |
-| Odia | AI4Bharat BPCC, Odia side | parallel-corpus target sentences | not tagged, see the dataset page |
-| Odia | OdiaGenAI collections (11 subsets) | culture, QA, OSCAR, PMO, Samanantar, Varta, Wikipedia and others | see each dataset page |
-| Dogri | CIIL Dogri corpus | 14k passages | see the dataset page |
-| Dogri | Dogri Alpaca-style instruction set | 52k instruction-response passages | see the dataset page |
+| Odia | `ai4bharat/IndicCorpV2`, split `ory_Orya` | news and web sentences | CC0 |
+| Odia | `ai4bharat/BPCC`, `nllb-filtered`, Odia side | parallel-corpus target sentences | CC0 |
+| Odia | `OdiaGenAIdata/pre_train_odia_data_processed` (11 source subsets) | CulturaX, IndicQA, OdiEnCorp, OSCAR, paraphrasing, PMO, Samanantar, IndicSentiment, Varta, Wikipedia, xP3 | CC BY-NC-SA 4.0 |
+| Dogri | `StephennFernandes/ciil_mega_corpus_dogri` (CIIL) | 14k passages | not stated |
+| Dogri | `saillab/alpaca-dogri-cleaned` | 52k instruction-response passages, Alpaca-52K machine-translated into Dogri | CC BY-NC |
 
 English was downloaded by streaming and stopped at a budget of one billion tokens per source. Odia and
 Dogri were taken whole.
@@ -330,3 +331,8 @@ the 29M parameters on depth; keep Cosmos QA context paragraphs in the instructio
   deterministic given the weights.
 - Evaluations were run on CPU in float32. GPU bfloat16 inference may differ in the last decimal.
 - [`scripts/make_figures.py`](../scripts/make_figures.py) regenerates every figure from `results/`.
+
+## 10. References
+
+Every dataset, model, method and library used here, with the exact identifier the code loads, its
+licence and a BibTeX entry, is listed in [CITATIONS.md](CITATIONS.md).

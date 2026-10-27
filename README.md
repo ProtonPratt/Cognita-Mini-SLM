@@ -25,7 +25,8 @@
   <a href="#download">Download</a> ·
   <a href="#results">Results</a> ·
   <a href="#reproduce">Reproduce</a> ·
-  <a href="docs/REPORT.md">Technical report</a>
+  <a href="docs/REPORT.md">Technical report</a> ·
+  <a href="docs/CITATIONS.md">Citations</a>
 </p>
 
 ---
@@ -434,7 +435,7 @@ Cognita-Mini/
 ├── scripts/       figures, log export, parameter breakdown, Hub release
 ├── results/       every measured number, as JSON
 ├── assets/        figures (light and dark)
-└── docs/          technical report and model cards
+└── docs/          technical report, model cards and citations
 ```
 
 ## Limitations
@@ -470,6 +471,8 @@ source datasets do not state clear redistribution terms.
 This project stands on public data and tools: Wikipedia, FineWeb, AI4Bharat IndicCorp v2 and BPCC,
 the OdiaGenAI collections, the CIIL Dogri corpus, mCSQA, CommonsenseQA, Cosmos QA, PIQA, RefinedWeb,
 NLLB-200, the Qwen3 architecture, Hugging Face Transformers, Datasets and PEFT, and SentencePiece.
+[`docs/CITATIONS.md`](docs/CITATIONS.md) lists every one of them with the exact identifier the code
+uses, its licence and a BibTeX entry. Please cite the ones your use depends on.
 
 Cognita-Mini started as a course mini-project on building language models end to end. This repository
 is the cleaned-up version, with every reported number measured again from the released weights.

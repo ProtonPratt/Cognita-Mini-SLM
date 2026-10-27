@@ -16,6 +16,10 @@ datasets:
 - wikimedia/wikipedia
 - HuggingFaceFW/fineweb
 - ai4bharat/IndicCorpV2
+- ai4bharat/BPCC
+- OdiaGenAIdata/pre_train_odia_data_processed
+- StephennFernandes/ciil_mega_corpus_dogri
+- saillab/alpaca-dogri-cleaned
 ---
 
 # Cognita-Mini-167M
@@ -92,3 +96,19 @@ validation; the best checkpoint by validation loss is released.
 ## License
 
 CC BY-NC 4.0. Research and non-commercial use.
+
+## Citation
+
+```bibtex
+@misc{jena2025cognitamini,
+  author = {Pratyush Jena},
+  title  = {Cognita-Mini: a 167M-parameter English, Odia and Dogri language model trained from scratch},
+  year   = {2025},
+  url    = {https://github.com/ProtonPratt/Cognita-Mini-SLM}
+}
+```
+
+Please also cite the data this model was trained on: Wikipedia, FineWeb, IndicCorp v2, BPCC, the
+OdiaGenAI Large Odia LLM Corpus, the CIIL Dogri corpus and the TaCo Dogri Alpaca set. Every source, with
+its licence and a BibTeX entry, is listed in
+[docs/CITATIONS.md](https://github.com/ProtonPratt/Cognita-Mini-SLM/blob/main/docs/CITATIONS.md).

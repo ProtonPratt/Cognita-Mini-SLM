@@ -6,6 +6,12 @@ language:
 base_model: ProtonPrat/Cognita-Mini-167M
 library_name: peft
 pipeline_tag: text-generation
+datasets:
+- yusuke1997/mCSQA
+- tau/commonsense_qa
+- allenai/cosmos_qa
+- ybisk/piqa
+- tiiuae/falcon-refinedweb
 tags:
 - lora
 - odia
@@ -90,3 +96,18 @@ chance 50%): 59.0% with the adapter, 57.2% without.
 ## License
 
 CC BY-NC 4.0. The translated instruction data was produced with NLLB-200 (CC BY-NC 4.0).
+
+## Citation
+
+```bibtex
+@misc{jena2025cognitamini,
+  author = {Pratyush Jena},
+  title  = {Cognita-Mini: a 167M-parameter English, Odia and Dogri language model trained from scratch},
+  year   = {2025},
+  url    = {https://github.com/ProtonPratt/Cognita-Mini-SLM}
+}
+```
+
+Please also cite the instruction data and tools this adapter depends on: mCSQA, CommonsenseQA, Cosmos
+QA, PIQA, RefinedWeb, NLLB-200 and LoRA. Every source, with its licence and a BibTeX entry, is listed in
+[docs/CITATIONS.md](https://github.com/ProtonPratt/Cognita-Mini-SLM/blob/main/docs/CITATIONS.md).

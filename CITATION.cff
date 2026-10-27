@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use Cognita-Mini, please cite it as below, along with the datasets, models and methods listed in docs/CITATIONS.md."
+title: "Cognita-Mini: a 167M-parameter English, Odia and Dogri language model trained from scratch"
+type: software
+authors:
+  - family-names: Jena
+    given-names: Pratyush
+repository-code: "https://github.com/ProtonPratt/Cognita-Mini-SLM"
+url: "https://huggingface.co/ProtonPrat/Cognita-Mini-167M"
+license: MIT
+keywords:
+  - language model
+  - Odia
+  - Dogri
+  - tokenizer
+  - LoRA
